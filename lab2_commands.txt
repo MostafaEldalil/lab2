@@ -1,0 +1,85 @@
+git checkout -b Mostafa1
+ git branch
+git merge origin new_branch
+git add .\next.js
+ git commit -m "I merged into my branch succ"
+ git add .\next.js
+ git commit -m "I merged into my branch succ and edited"
+ git push -u origin Mostafa1
+/-----------------------------------------------------
+FEtch
+**git checkout -b "Mostafa11"
+Switched to a new branch 'Mostafa11'
+**PS G:\iti_git\lab_2\newtestlab2> git commit -a -m "First mostafa11"
+[Mostafa11 d61a4fe] First mostafa11
+ 1 file changed, 16 deletions(-)
+**PS G:\iti_git\lab_2\newtestlab2> git fetch origin ali3
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 839 bytes | 1024 bytes/s, done.
+From https://github.com/aliosman21/newtestlab2
+ * branch            ali3       -> FETCH_HEAD
+ * [new branch]      ali3       -> origin/ali3
+/==========================================================
+Revert: the rolled back commit is still in <<git log>>
+git push -u origin main
+git add .\main.js
+git commit -m "1to3"
+git add .\main.js
+git commit -m "4to6"
+git add .\main.js
+git commit -m "7to9"
+git push origin main
+git log
+git revert f4a9e6c058e7197abfe75e524a30ecdf6c0aa998
+====
+the rolled back commit is still in <<git log>>
+and need to be comitted again
+/===============================================================
+Using reset -- back to nmber 6
+git reset --hard HEAD^3
+git push origin main  --force
+/======================================================
+Using reset -- back to main
+	
+git push origin main  --force
+/=======================================
+Last three Commits
+git log -3
+/=======================================
+Graph:
+
+git checkout -b "Chech_graph"
+git commit -a -m "Adding a,b,c"
+ git push origin Chech_graph
+ git switch main
+git merge Chech_graph
+git commit -a -m "add 33"
+ git push origin main -f
+----
+it log --graph
+* commit 9acbf21eebbf1e710ccc2bc8719be2fdff857e05 (HEAD -> main, origin/main)
+| Author: Mostafa Eldalil <mostafa.eldalil2@gmail.com>
+| Date:   Sun Jan 3 18:35:27 2021 +0200
+|
+|     add 33
+|
+* commit 5cefc8f88c95174aaf4a680e0b7cd5231203e78b (origin/Chech_graph, Chech_graph)
+| Author: Mostafa Eldalil <mostafa.eldalil2@gmail.com>
+| Date:   Sun Jan 3 18:33:42 2021 +0200
+|
+|     Adding a,b,c
+|
+/===============================================================
+
+git add .\new.js
+ git commit -m "NewFile"
+git switch Chech_graph
+**error: Your local changes to the following files would be overwritten by checkout:
+        new.js
+git stash
+**Saved working directory and index state WIP on main: 5e681be NewFile
+ git switch Chech_graph
+**Switched to branch 'Chech_graph'
